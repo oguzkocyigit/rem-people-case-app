@@ -1,0 +1,29 @@
+@import "../../assets/style/_variables";
+
+.w-150 {
+  width: 150px !important;
+}
+
+.w-250 {
+  width: 250px !important;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.vertical-align {
+  align-items: center;
+}
+
+.column {
+  text-align: left;
+}
+
+.blue-color {
+  color: $blue;
+}
