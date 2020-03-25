@@ -1,20 +1,23 @@
 @import "../../assets/style/variables";
 
-.rem-table {
-  width: 100%;
-  th {
-    background: #efefef !important;
+
+.highcharts-button {
+  .highcharts-button-box {
+    fill: $rem;
   }
-  .cell {
-    text-align: center;
+  text {
+    fill: #fff !important;
   }
-  .el-table__body {
-    tr {
-      &:hover {
-        &> td {
-          background-color: #e7e7e7 !important;
-        }
-      }
-    }
+}
+
+.highcharts-axis-labels {
+  text {
+    fill: $rem !important;
+  }
+}
+
+.highcharts-label {
+  text {
+    fill: $rem !important;
   }
 }

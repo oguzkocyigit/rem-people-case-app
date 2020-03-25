@@ -1,19 +1,7 @@
 import Vue from 'vue'
-import 'element-ui/lib/theme-chalk/index.css'
-import {
-  Checkbox,
-  Radio,
-  Table,
-  TableColumn,
-  Button,
-  Loading
-} from 'element-ui'
+import VueHighCharts from 'vue-highcharts'
+import HighCharts from 'highcharts'
+import loadDrillDown from 'highcharts/modules/drilldown'
 
-Vue.use(Checkbox)
-Vue.use(Button)
-Vue.use(Radio)
-Vue.use(Table)
-Vue.use(TableColumn)
-Vue.use(Loading.directive)
-
-Vue.prototype.$loading = Loading.service
+loadDrillDown(HighCharts);
+Vue.use(VueHighCharts, { HighCharts });

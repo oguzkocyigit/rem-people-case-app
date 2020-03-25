@@ -1,1 +1,14 @@
-@import "../../assets/style/_variables";
+@import "../assets/style/variables";
+
+.availability-index {
+  i {
+    font-size:18px;
+  }
+  .el-icon-success {
+    color: green;
+  }
+
+  .el-icon-remove {
+    color: red;
+  }
+}

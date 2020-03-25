@@ -1,13 +1,21 @@
 <template>
-    $END$
+    <div class="availability-index has-text-centered">
+        <i :class="`el-icon-${iconType}`"/>
+    </div>
 </template>
 
 <script>
   export default {
-    name: 'Availability'
+    name: 'Availability',
+    props: {
+      status: { required: true }
+    },
+    computed: {
+      iconType () {
+        return this.status ? 'success' : 'remove'
+      },
+    }
   }
 </script>
 
-<style scoped>
-
-</style>
+<style lang="scss" src="./Availability.scss"/>

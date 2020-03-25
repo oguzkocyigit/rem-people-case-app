@@ -1,32 +1,47 @@
-@import "../../assets/style/_variables";
+@import "variables";
 @import "../../assets/style/globals";
 @import "~bulma/bulma";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600&display=swap');
 
+html,body {
+  height: 100%;
+}
 #app {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  color: #5b5b5b;
+  position: relative;
+  background-color: #f7f6f4;
+  height: 100%;
 
-.page-frame {
-  width:1280px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin:0 auto;
-
-  .logo {
-    width:150px;
-  }
-
-  .nav-bar {
-    .nav-link {
-      font-size:24px;
-      color: $blue;
-      font-weight: 600;
-    }
+  .wrapper {
+    padding: 0 100px;
   }
 }
 
+.back-btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding:3px 10px;
+  border-color:$rem;
+  color: $rem;
+  border-radius: 3px;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: $rem;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+  }
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.overlay-top,
+.overlay-bottom {
+  background: $rem !important;
+}

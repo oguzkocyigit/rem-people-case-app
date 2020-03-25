@@ -1,7 +1,44 @@
-@import "../../assets/style/_variables";
+@import "../../assets/style/variables";
 
-.table__index {
+.list_page__index {
   height: 100vh;
   background-size: cover;
   background: url('../../assets/img/table_page_bg.jpg') no-repeat center center;
+
+  .page-frame {
+    padding:50px;
+    width:100%;
+    background: rgba(245, 245, 245, 0.85);
+    min-height: 500px;
+  }
+
+  .page-link {
+    color: #5b5b5b !important;
+    transition: all 0.2s ease-in-out;
+    padding:3px;
+
+    &.router-link-active {
+      background: $rem !important;
+      color: #fff !important;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      background: $rem !important;
+      color: #fff !important;
+      border-radius: 5px;
+    }
+  }
+
+  .page-title {
+    background-color: rgba(0, 0, 0, 0.502);
+    padding:50px 0;
+
+    h1 {
+        font-size: 48px;
+        color: #fff;
+        line-height: 1.2;
+    }
+  }
 }

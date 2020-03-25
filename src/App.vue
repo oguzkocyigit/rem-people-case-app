@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <button
+                class="back-btn"
+                v-if="!isHomePage"
+                @click="goBack()"
+        >
+          <i class="el-icon-d-arrow-left"/>
+          Back
+        </button>
+        <vue-page-transition name="overlay-down-full">
+            <router-view/>
+        </vue-page-transition>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    computed: {
+      isHomePage () {
+        return this.$route.name === 'home'
+      },
+    },
+    methods: {
+      goBack () {
+        window.history.back()
+      },
+    },
   }
-}
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

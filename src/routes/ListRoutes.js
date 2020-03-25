@@ -1,12 +1,22 @@
-export const CostManagementRoutes = [
+export const ListRoutes = [
   {
-    path: 'list',
-    name: 'costManagement.list',
-    component: () => import('@/views/CostManagement/CostManagementList.vue'),
+    path: 'table/',
+    name: 'list.table',
+    component: () => import('@/components/Table/Table.vue'),
     props: true,
     meta: {
       guard: { except: ['guest'] },
-      title: 'Cost Management',
+      title: 'List Page View',
+    },
+  },
+  {
+    path: 'chart/',
+    name: 'list.chart',
+    component: () => import('@/components/Chart/Chart.vue'),
+    props: true,
+    meta: {
+      guard: { except: ['guest'] },
+      title: 'List Page View',
     },
   },
 ]

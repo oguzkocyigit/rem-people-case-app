@@ -1,11 +1,11 @@
-import { Transformer } from '@tb/transformer'
+import { Transformer } from './Transformer'
 
-export class TerminalTransformers extends Transformer {
+export class ChartDataTransformer extends Transformer {
   static fetch (data) {
     return {
-      id: data.id,
       name: data.name,
-      destination: data.destination.name,
+      y: data.data.map(item => item[1]).reduce((acc, current) => acc + current),
+      drilldown: data.id,
     }
   }
 }

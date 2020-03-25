@@ -1,34 +1,20 @@
-@import "../../assets/style/_variables";
+@import "../../assets/style/variables";
 
-.login_index {
-  height: 100vh;
-  background: url('../../assets/img/bg-image.jpg') no-repeat center center;
-  background-size: cover;
-
-  .logo {
-    width: 90px;
+.rem-table {
+  width: 100%;
+  th {
+    background: #efefef !important;
   }
-
-  .welcome-msg {
-    font-size: 40px;
-    width: 215px;
-    font-weight: 300;
+  .cell {
+    text-align: center;
   }
-
-  .login-btn {
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(238, 51, 124);
-    border-radius: 10px;
-    color: $rem;
-    transition: all 0.2s ease-in-out;
-    padding:5px 30px;
-
-    &:hover,
-    &:focus {
-      background: transparent;
-      transition: all 0.2s ease-in-out;
-      box-shadow: 0px 1px 13px 0px rgb(238, 51, 124);
+  .el-table__body {
+    tr {
+      &:hover {
+        &> td {
+          background-color: #e7e7e7 !important;
+        }
+      }
     }
   }
 }
